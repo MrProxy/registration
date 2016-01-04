@@ -6,7 +6,7 @@ jQuery(document).ready(function($){
 
 	$(".userinfo").focusin(function($){
 
-		var parent = $(this).parent(".field").get(0);
+		var parent = jQuery(this).parent(".field").get(0);
 
 		$(parent).nextAll("p").remove();
 		$(this).removeClass("error");
