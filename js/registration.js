@@ -1,102 +1,102 @@
 
-jQuery(document).ready(function($){
+jQuery(document).ready(function(){
 
-	$("#telephoneNumber").intlTelInput();
-	$("#country").countrySelect();
+	jQuery("#telephoneNumber").intlTelInput();
+	jQuery("#country").countrySelect();
 
-	$(".userinfo").focusin(function($){
+	jQuery(".userinfo").focusin(function(){
 
 		var parent = jQuery(this).parent(".field").get(0);
 
-		$(parent).nextAll("p").remove();
-		$(this).removeClass("error");
+		jQuery(parent).nextAll("p").remove();
+		jQuery(this).removeClass("error");
 
 	});
 
-	$("input.userinfo").focusout(function($){
+	jQuery("input.userinfo").focusout(function(){
 		validateEmpty(this);
 	});
 
-	$("#pin").focusout(function($){
+	jQuery("#pin").focusout(function(){
 		validatePin(pin);
 	});
 
-	$("#password").focusout(function($){
+	jQuery("#password").focusout(function(){
 		validatePassword(this);
 	});
 
-	$("#vpass").focusout(function($){
+	jQuery("#vpass").focusout(function(){
 		validateVPassword(this);
 	});
 
-	$("#country").focusin(function($){
-		var countrycode = $(this).countrySelect("getSelectedCountryData")["iso2"];
-		$("#telephoneNumber").intlTelInput("selectCountry", countrycode);
+	jQuery("#country").focusin(function(){
+		var countrycode = jQuery(this).countrySelect("getSelectedCountryData")["iso2"];
+		jQuery("#telephoneNumber").intlTelInput("selectCountry", countrycode);
 	});
 
-	$("#telephoneNumber").focusout(function($){
+	jQuery("#telephoneNumber").focusout(function(){
 		validatePhone(this);
 	});
 
-	$("#contactphone").focusout(function($){
+	jQuery("#contactphone").focusout(function(){
 		validatePhone(this);
 	});
 
-	$("#userName").focusout(function($){
+	jQuery("#userName").focusout(function(){
 		validateEmail(this);
 	});
 
-	$("#create").click(function($){
+	jQuery("#create").click(function(){
 
-		createUser($);
+		createUser(jQuery);
 
 	});
 });
 
-function createUser($){
+function createUser(jQuery){
 
-	$(".errortext").remove();
+	jQuery(".errortext").remove();
 
 	var error = 0;
 
-	var inputs = $("input.userinfo");
+	var inputs = jQuery("input.userinfo");
 
 	var userinfo = {};
 
-	error = error + validatePhone($("#telephoneNumber"));
-	error = error + validatePhone($("#contactphone"));
-	error = error + validateEmail($("#userName"));
-	error = error + validatePin($("#pin"));
-	error = error + validatePassword($("#password"));
+	error = error + validatePhone(jQuery("#telephoneNumber"));
+	error = error + validatePhone(jQuery("#contactphone"));
+	error = error + validateEmail(jQuery("#userName"));
+	error = error + validatePin(jQuery("#pin"));
+	error = error + validatePassword(jQuery("#password"));
 	error = error + validateVPassword("#vpass");
 	error = error + validateBirthDateDay("#birthdateday");
 	error = error + validateBirthDateYear("#birthdateyear");
 
-	inputs.each(function($) {
+	inputs.each(function() {
 
 		var verification = validateEmpty(this);
 
 		if (verification) {
 
-			userinfo[this.id] = $(this).val();
+			userinfo[this.id] = jQuery(this).val();
 
 		} else {
 			error = error+1;
 		}
 	});
 
-	var selectors = $("select.userinfo");
+	var selectors = jQuery("select.userinfo");
 
-	selectors.each(function($) {
+	selectors.each(function() {
 
-		if ($(this).val() != null) {
+		if (jQuery(this).val() != null) {
 
-			$(this).removeClass("error");
-			userinfo[this.id] = $(this).val().trim();
+			jQuery(this).removeClass("error");
+			userinfo[this.id] = jQuery(this).val().trim();
 
 		} else {
 
-			$(this).addClass("error");
+			jQuery(this).addClass("error");
 
 			error = error+1;
 		}
@@ -105,10 +105,10 @@ function createUser($){
 	if (error == 0 ) {
 
 		userinfo["birthdate"] = parseBirthDate(userinfo["birthdateday"],userinfo["birthdatemonth"],userinfo["birthdateyear"]);
-		userinfo["country"] = $("#country").countrySelect("getSelectedCountryData")["iso2"];
-		userinfo["prefix"] = $("#telephoneNumber").intlTelInput("getSelectedCountryData")["dialCode"];
+		userinfo["country"] = jQuery("#country").countrySelect("getSelectedCountryData")["iso2"];
+		userinfo["prefix"] = jQuery("#telephoneNumber").intlTelInput("getSelectedCountryData")["dialCode"];
 		userinfo["language"] = navigator.language;
-		userinfo["acceptedterms"] = $("#acceptedterms").val ? 1:0;
+		userinfo["acceptedterms"] = jQuery("#acceptedterms").val ? 1:0;
 
 		delete userinfo["vpass"];
 		delete userinfo["birthdateday"];
@@ -120,7 +120,7 @@ function createUser($){
 	    	var basicservice = "http://srvs2.drsecurityapp.com/appservices/webservices/DRS_002_REGISTER.php";
 			var fullservice = "http://srvs2.drsecurityapp.com/appservices/webservices/DRS_027_COMPLETE_REGISTER.php";
 
-	    	$.post(fullservice,userinfo,
+	    	jQuery.post(fullservice,userinfo,
 
 				function(data, status){
 			    	if(data["WebOnly"] == "Success" && data["errorCode"] == 0){
