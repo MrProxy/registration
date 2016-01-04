@@ -1,0 +1,43 @@
+body{
+
+	font-family: Roboto, Helvetica, Arial, Verdana, sans-serif;
+
+}
+tr:nth-child(2n-1) td{
+
+	padding-top: 7px;
+
+}
+tr:nth-child(2n) td{
+	padding: 7px 15px 0 0;
+}
+
+.error{
+	border: solid 2px #F44336;
+}
+
+#regtitle{
+	font-size: 44px;
+	font-weight: 400;
+	
+}
+#regheader{
+	margin: 55px 0px 15px 0px;
+	text-align: center;
+	
+}
+#regtable{
+	margin: auto;
+}
+#regtable td{
+	font-size: 14px;
+}
+#regbot{
+	text-align: center;
+}
+.errortext{
+	max-width: 170px;
+	color: #F44336;
+	font-size: 12px;
+	margin: 2px 0 2px 0;
+}
