@@ -41,3 +41,6 @@ tr:nth-child(2n) td{
 	font-size: 12px;
 	margin: 2px 0 2px 0;
 }
+select.userinfo, input.userinfo, div.country-select, div.intl-tel-input {
+    width: 95%;
+}
