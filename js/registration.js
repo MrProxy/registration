@@ -4,7 +4,7 @@ jQuery(document).ready(function($){
 	$("#telephoneNumber").intlTelInput();
 	$("#country").countrySelect();
 
-	$(".userinfo").focusin(function(){
+	$(".userinfo").focusin(function($){
 
 		var parent = $(this).parent(".field").get(0);
 
@@ -13,47 +13,47 @@ jQuery(document).ready(function($){
 
 	});
 
-	$("input.userinfo").focusout(function(){
+	$("input.userinfo").focusout(function($){
 		validateEmpty(this);
 	});
 
-	$("#pin").focusout(function(){
+	$("#pin").focusout(function($){
 		validatePin(pin);
 	});
 
-	$("#password").focusout(function(){
+	$("#password").focusout(function($){
 		validatePassword(this);
 	});
 
-	$("#vpass").focusout(function(){
+	$("#vpass").focusout(function($){
 		validateVPassword(this);
 	});
 
-	$("#country").focusin(function(){
+	$("#country").focusin(function($){
 		var countrycode = $(this).countrySelect("getSelectedCountryData")["iso2"];
 		$("#telephoneNumber").intlTelInput("selectCountry", countrycode);
 	});
 
-	$("#telephoneNumber").focusout(function(){
+	$("#telephoneNumber").focusout(function($){
 		validatePhone(this);
 	});
 
-	$("#contactphone").focusout(function(){
+	$("#contactphone").focusout(function($){
 		validatePhone(this);
 	});
 
-	$("#userName").focusout(function(){
+	$("#userName").focusout(function($){
 		validateEmail(this);
 	});
 
-	$("#create").click(function(){
+	$("#create").click(function($){
 
-		createUser();
+		createUser($);
 
 	});
 });
 
-function createUser(){
+function createUser($){
 
 	$(".errortext").remove();
 
@@ -72,7 +72,7 @@ function createUser(){
 	error = error + validateBirthDateDay("#birthdateday");
 	error = error + validateBirthDateYear("#birthdateyear");
 
-	inputs.each(function() {
+	inputs.each(function($) {
 
 		var verification = validateEmpty(this);
 
@@ -87,7 +87,7 @@ function createUser(){
 
 	var selectors = $("select.userinfo");
 
-	selectors.each(function() {
+	selectors.each(function($) {
 
 		if ($(this).val() != null) {
 
