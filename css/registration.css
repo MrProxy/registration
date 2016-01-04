@@ -26,10 +26,10 @@ tr:nth-child(2n) td{
 	text-align: center;
 	
 }
-#regtable{
+#regcontent{
 	margin: auto;
 }
-#regtable td{
+#regcontent{
 	font-size: 14px;
 }
 #regbot{
