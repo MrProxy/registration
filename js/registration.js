@@ -1,4 +1,4 @@
-$(document).ready(function(){
+jQuery(document).ready(function($){
 
 	$("#telephoneNumber").intlTelInput();
 	$("#country").countrySelect();
