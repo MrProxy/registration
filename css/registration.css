@@ -47,6 +47,9 @@ section.registration_content {
 ul.registration_list {
     list-style-type: none;
 }
-ul.registration_list li {
-    display: inline-flex;
+.userinfo, .country-select, .intl-tel-input {
+    width: 100%;
+}
+.terms_condit, .register_btn_box {
+    text-align: center;
 }
