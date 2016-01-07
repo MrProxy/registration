@@ -5,24 +5,26 @@
 		<link rel="stylesheet" href="https://rawgit.com/MrProxy/registration/master/lib/intl-tel-input-master/build/css/intlTelInput.css">
 		<link rel="stylesheet" type="text/css" href="https://rawgit.com/MrProxy/registration/master/css/registration.css">
 		<link rel="stylesheet" href="https://rawgit.com/MrProxy/registration/master/lib/country-select-js-master/build/css/countrySelect.css">
+		<link rel="stylesheet" href="https://rawgit.com/MrProxy/registration/master/lib/bootstrap-3.3.6-dist/css/bootstrap.min.css">
 
 		<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script-->
 		<script src="https://rawgit.com/MrProxy/registration/master/lib/intl-tel-input-master/build/js/intlTelInput.min.js"></script>
 		<script src="https://rawgit.com/MrProxy/registration/master/lib/country-select-js-master/build/js/countrySelect.min.js"></script>
+		<script type="text/javascript" src="https://rawgit.com/MrProxy/registration/master/lib/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="https://rawgit.com/MrProxy/registration/master/js/registration.js"></script>
 		<script type="text/javascript" src="https://rawgit.com/MrProxy/registration/master/js/validation.js"></script>
 		<script type="text/javascript" src="https://rawgit.com/MrProxy/registration/master/js/birthdate.js"></script>
 	</head>
 	<body>
-		<header id="regheader">
-			<div class = "field">
-				<span id = "regtitle">REGISTRATION</span>
-			</div>
-		</header>
 		<section>
+			<header id="regheader">
+				<div class = "field">
+					<span id = "regtitle">REGISTRATION</span>
+				</div>
+			</header>
 			<form id = "regform">
 				<div id="regcontent">
-					<ul>
+					<ul class="registration_list">
 						<li>
 							<label>Name</label>
 						</li>
@@ -37,235 +39,145 @@
 						<li>
 							<label>E-mail</label>
 						</li>
-
-					</ul>
-					<table id="regtable">
-						<tr>
-							<td>
-								<div>
-									
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								
-							</td>
-							<td>
-								
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class = "field">
-									
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class = "field">
-									<input class= "userinfo"  type="email" id="userName">
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class = "field">
-									<label>Password</label>
-								</div>
-							</td>
-							<td>
-								<div class = "field">
-									<label>Verify Password</label>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class = "field">
-									<input class= "userinfo"  type="password" id="password">
-								</div>
-							</td>
-							<td>
-								<div class = "field">
-									<input class= "userinfo"  type="password" id="vpass">
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class = "field">
-									<label>Security Question</label>
-								</div>
-							</td>
-							<td>
-								<div class = "field">
-									<label>Security Answer</label>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class = "field">
+						<li>
+							<div class = "field">
+								<input class= "userinfo"  type="email" id="userName">
+							</div>
+						</li>
+						<li>
+							<label>Password</label>
+						</li>
+						<li>
+							<div class = "field">
+								<input class= "userinfo"  type="password" id="password">
+							</div>
+							<div class = "field">
+								<input class= "userinfo"  type="password" id="vpass">
+							</div>
+						</li>
+						<li>
+							<div class = "field">
+								<label>Security Question</label>
+							</div>
+							<div class = "field">
+								<label>Security Answer</label>
+							</div>
+						</li>
+						<li>
+							<div class = "field">
 									<input class= "userinfo"  type="text" id="securityquestion">
-								</div>
-							</td>
-							<td>
-								<div class = "field">
+							</div>
+							<div class = "field">
 									<input class= "userinfo"  type="text" id="securityanswer">
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class = "field">
+							</div>
+						</li>
+						<li>
+							<div class = "field">
 									<label>PIN</label>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class = "field">
-									<input class= "userinfo"  id="pin" type="text" maxlength= "4">	
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class = "field">
+							</div>
+							<div class = "field">
 									<label>Gender</label>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class = "field">
-									<select class= "userinfo" id="gender" name="Gender">
-										<option value="default" selected disabled>Gender</option>
-										<option>Female</option>
-										<option>Male</option>
-										<option>Other</option>
-									</select>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class = "field">
-									<label>Birth Date</label>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class = "field">
-									<input type="text" class= "userinfo" id="birthdateday" maxlength= "2">
-								</div>
-							</td>
-							<td>
-								<div class = "field">
-									<select class= "userinfo" id="birthdatemonth">
-										<option value="default" selected disabled>Month</option>
-										<option value="0">January</option>
-										<option value="1">February</option>
-										<option value="2">March</option>
-										<option value="3">April</option>
-										<option value="4">May</option>
-										<option value="5">June</option>
-										<option value="6">July</option>
-										<option value="7">August</option>
-										<option value="8">September</option>
-										<option value="9">October</option>
-										<option value="10">November</option>
-										<option value="11">December</option>
-									</select> 
-								</div>
-							</td>
-							<td>
-								<div class = "field">
-									<input type="text" class= "userinfo" id="birthdateyear" maxlength= "4">
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class = "field">
-									<label>Country</label>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class = "field">
-									<input class= "userinfo"  type="text" id="country" readonly>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class = "field">
-									<label>Telephone Number</label>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class = "field">
-									<input class= "userinfo"  type="tel" id="telephoneNumber">
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class = "field">
-									<label>Contact Name</label>
-								</div>
-							</td>
-							<td>
-								<div class = "field">
-									<label>Contact Phone</label>
-								</div>
-							</td>
-							<td>
-								<div class = "field">
-									<label>Contact Relation</label>
-								</div>
-							</td>					
-						</tr>
-						<tr>
-							<td>
-								<div class = "field">
-									<input class= "userinfo"  type="text" id="contactname">
-								</div>
-							</td>
-							<td>
-								<div class = "field">
-									<input class= "userinfo"  type="text" maxlength= "9" id="contactphone">
-								</div>
-							</td>
-							<td>
-								<div class = "field">
-									<select class= "userinfo"  id="contactlink">
-										<option value="default" selected disabled>Contact Link</option>
-										<option>Friend</option>
-										<option>Son</option>
-										<option>Mother</option>
-										<option>Father</option>
-										<option>Couple</option>
-										<option>Work</option>
-									</select>
-								</div>
-							</td>
-						</tr>
-					</table>
-				</div>
-				<div id="regbot">
-					<div>
-						<input type="checkbox" id="acceptedterms">
-						I accept the terms and conditions including the privacy policy
-					</div>
-					<button type="button" id="create">Register</button>
+							</div>
+						</li>
+						<li>
+							<div class = "field">
+								<input class= "userinfo"  id="pin" type="text" maxlength= "4">	
+							</div>
+							<div class = "field">
+								<select class= "userinfo" id="gender" name="Gender">
+									<option value="default" selected disabled>Gender</option>
+									<option>Female</option>
+									<option>Male</option>
+									<option>Other</option>
+								</select>
+							</div>
+						</li>
+						<li>
+							<div class = "field">
+								<label>Birth Date</label>
+							</div>
+						</li>
+						<li>
+							<div class = "field">
+								<input type="text" class= "userinfo" id="birthdateday" maxlength= "2">
+							</div>
+							<div class = "field">
+								<select class= "userinfo" id="birthdatemonth">
+									<option value="default" selected disabled>Month</option>
+									<option value="0">January</option>
+									<option value="1">February</option>
+									<option value="2">March</option>
+									<option value="3">April</option>
+									<option value="4">May</option>
+									<option value="5">June</option>
+									<option value="6">July</option>
+									<option value="7">August</option>
+									<option value="8">September</option>
+									<option value="9">October</option>
+									<option value="10">November</option>
+									<option value="11">December</option>
+								</select> 
+							</div>
+							<div class = "field">
+								<input type="text" class= "userinfo" id="birthdateyear" maxlength= "4">
+							</div>
+						</li>
+						<li>
+							<div class = "field">
+								<label>Country</label>
+							</div>
+							<div class = "field">
+								<label>Telephone Number</label>
+							</div>
+						</li>
+						<li>
+							<div class = "field">
+								<input class= "userinfo"  type="text" id="country" readonly>
+							</div>
+							<div class = "field">
+								<input class= "userinfo"  type="tel" id="telephoneNumber">
+							</div>
+						</li>
+						<li>
+							<div class = "field">
+								<label>Contact Name</label>
+							</div>
+							<div class = "field">
+								<label>Contact Phone</label>
+							</div>
+							<div class = "field">
+								<label>Contact Relation</label>
+							</div>
+						</li>
+						<li>
+							<div class = "field">
+								<input class= "userinfo"  type="text" id="contactname">
+							</div>
+							<div class = "field">
+								<input class= "userinfo"  type="text" maxlength= "9" id="contactphone">
+							</div>
+							<div class = "field">
+								<select class= "userinfo"  id="contactlink">
+									<option value="default" selected disabled>Contact Link</option>
+									<option>Friend</option>
+									<option>Son</option>
+									<option>Mother</option>
+									<option>Father</option>
+									<option>Couple</option>
+									<option>Work</option>
+								</select>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input type="checkbox" id="acceptedterms">
+								I accept the terms and conditions including the privacy policy
+							</div>
+						</li>
+						<li>
+							<button type="button" id="create">Register</button>
+						</li>
+					</ul>
 				</div>
 			</form>
 		</section>

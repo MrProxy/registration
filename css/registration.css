@@ -19,12 +19,10 @@ tr:nth-child(2n) td{
 #regtitle{
 	font-size: 44px;
 	font-weight: 400;
-	
 }
 #regheader{
 	margin: 55px 0px 15px 0px;
 	text-align: center;
-	
 }
 #regcontent{
 	margin: auto;
@@ -43,4 +41,13 @@ tr:nth-child(2n) td{
 }
 select.userinfo, input.userinfo, div.country-select, div.intl-tel-input {
     width: 95%;
+}
+
+/*%============================================GLOBAL========================================================================================%*/
+section.registration_content {
+    float: none !important;
+    margin: auto;
+}
+ul.registration_list {
+    list-style-type: none;
 }
