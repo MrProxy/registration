@@ -39,10 +39,6 @@ tr:nth-child(2n) td{
 	font-size: 12px;
 	margin: 2px 0 2px 0;
 }
-select.userinfo, input.userinfo, div.country-select, div.intl-tel-input {
-    width: 95%;
-}
-
 /*%============================================GLOBAL========================================================================================%*/
 section.registration_content {
     float: none !important;
@@ -50,4 +46,7 @@ section.registration_content {
 }
 ul.registration_list {
     list-style-type: none;
+}
+ul.registration_list li {
+    display: inline-flex;
 }
