@@ -53,3 +53,12 @@ ul.registration_list {
 .terms_condit, .register_btn_box {
     text-align: center;
 }
+ul.registration_list li {
+    margin-bottom: 7px;
+}
+.registration_box {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+input#acceptedterms {
+    margin-right: 10px;
+}
