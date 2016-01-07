@@ -15,7 +15,7 @@ jQuery(document).ready(function(){
 	});
 
 	jQuery("#pin").focusout(function(){
-		validatePin(pin);
+		validatePin(this);
 	});
 
 	jQuery("#password").focusout(function(){

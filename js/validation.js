@@ -35,7 +35,7 @@ function validatePhone(sPhone){
 function validatePin(sPin){
 
 	var pin = jQuery(sPin).val().trim();
-	var filter = /^\d{4}jQuery/;
+	var filter = /^\d{4}$/;
 
 	var parent = jQuery(sPin).parent(".field").get(0);
 
@@ -111,7 +111,7 @@ function validateBirthDateDay(sDay , month, year){
 
 	var daysinmonth = daysInMonth(month, year);
 
-	var filter = /^\d{2}jQuery/;
+	var filter = /^\d{2}$/;
 
 	if (day.length == 1) {
 		day = "0"+ day;
@@ -140,7 +140,7 @@ function validateBirthDateYear(sYear){
 	var minyear = actualyear - 14;
 	var maxyear = actualyear - 120;
 
-	var filter = /^\d{4}jQuery/;
+	var filter = /^\d{4}$/;
 
 	if(yearint > minyear || yearint < maxyear && filter.test(year)){
 
