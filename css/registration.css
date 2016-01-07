@@ -46,6 +46,7 @@ section.registration_content {
 }
 ul.registration_list {
     list-style-type: none;
+    margin: 0;
 }
 .userinfo, .country-select, .intl-tel-input {
     width: 100%;
