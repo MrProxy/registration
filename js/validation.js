@@ -3,7 +3,7 @@ function validateEmail(sEmail) {
 	var email = jQuery(sEmail).val().trim();
 	var parent = jQuery(sEmail).parent(".field").get(0);
 
-    var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)jQuery/;
+    var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
 
     if (!filter.test(email)) {
     	jQuery(sEmail).addClass("error");
@@ -20,7 +20,7 @@ function validatePhone(sPhone){
 	var phone  = jQuery(sPhone).val().trim(); 
 	var parent = jQuery(sPhone).parent(".field").get(0);
 
-	var filter = /^\d{9}jQuery/
+	var filter = /^\d{9}$/
 
 	if (!filter.test(phone)) {
 		jQuery(sPhone).addClass("error");
