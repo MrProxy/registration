@@ -5,12 +5,9 @@ jQuery(document).ready(function(){
 	jQuery("#country").countrySelect();
 
 	jQuery(".userinfo").focusin(function(){
-
 		var parent = jQuery(this).parent(".field").get(0);
-
 		jQuery(parent).nextAll("p").remove();
 		jQuery(this).removeClass("error");
-
 	});
 
 	jQuery("input.userinfo").focusout(function(){

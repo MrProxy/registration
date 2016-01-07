@@ -63,3 +63,6 @@ ul.registration_list li {
 input#acceptedterms {
     margin-right: 10px;
 }
+button#create {
+    color: #fff;
+}
