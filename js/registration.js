@@ -39,7 +39,7 @@ jQuery(document).ready(function(){
 		validatePhone(this);
 	});
 
-	jQuery("#userName").focusout(function(){
+	jQuery("#email").focusout(function(){
 		validateEmail(this);
 	});
 
@@ -62,7 +62,7 @@ function createUser(jQuery){
 
 	error = error + validatePhone(jQuery("#telephoneNumber"));
 	error = error + validatePhone(jQuery("#contactphone"));
-	error = error + validateEmail(jQuery("#userName"));
+	error = error + validateEmail(jQuery("#email"));
 	error = error + validatePin(jQuery("#pin"));
 	error = error + validatePassword(jQuery("#password"));
 	error = error + validateVPassword("#vpass");

@@ -69,3 +69,6 @@ input#acceptedterms {
 button#create {
     color: #fff;
 }
+.userinfo {
+    margin-bottom: 0 !important;
+}
