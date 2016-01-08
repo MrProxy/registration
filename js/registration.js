@@ -117,6 +117,8 @@ function createUser(jQuery){
 	    	var basicservice = "http://srvs2.drsecurityapp.com/appservices/webservices/DRS_002_REGISTER.php";
 			var fullservice = "http://srvs2.drsecurityapp.com/appservices/webservices/DRS_027_COMPLETE_REGISTER.php";
 
+			console.log(userinfo);
+
 	    	jQuery.post(fullservice,userinfo,
 
 				function(data, status){
