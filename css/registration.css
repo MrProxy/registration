@@ -54,6 +54,9 @@ ul.registration_list {
 .terms_condit, .register_btn_box {
     text-align: center;
 }
+.register_btn_box {
+    padding-bottom: 25px;
+}
 ul.registration_list li {
     margin-bottom: 7px;
 }
