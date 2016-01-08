@@ -72,3 +72,6 @@ button#create {
 .userinfo {
     margin-bottom: 0 !important;
 }
+.field {
+    float: left !important;
+}
