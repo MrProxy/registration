@@ -50,7 +50,7 @@ jQuery(document).ready(function(){
 	});
 });
 
-function createUser(jQuery){
+function createUser(){
 
 	jQuery(".errortext").remove();
 
@@ -62,7 +62,7 @@ function createUser(jQuery){
 
 	error = error + validatePhone(jQuery("#telephoneNumber"));
 	error = error + validatePhone(jQuery("#contactphone"));
-	error = error + validateEmail(jQuery("#email"));
+	error = error + validateEmail(jQuery("#userName"));
 	error = error + validatePin(jQuery("#pin"));
 	error = error + validatePassword(jQuery("#password"));
 	error = error + validateVPassword("#vpass");
