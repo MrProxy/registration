@@ -39,7 +39,7 @@ jQuery(document).ready(function(){
 		validatePhone(this);
 	});
 
-	jQuery("#email").focusout(function(){
+	jQuery("#userName").focusout(function(){
 		validateEmail(this);
 	});
 
