@@ -34,9 +34,8 @@ tr:nth-child(2n) td{
 	text-align: center;
 }
 .errortext{
-	max-width: 170px;
 	color: #F44336;
-	font-size: 12px;
+	font-size: 11px;
 	margin: 2px 0 2px 0;
 }
 /*%============================================GLOBAL========================================================================================%*/
