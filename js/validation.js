@@ -95,7 +95,7 @@ function validateEmpty(component){
 
 		jQuery(component).addClass("error");
 	
-		jQuery(parent).after(jQuery("<p id='emptyerror' class='errortext'>This field can't be empty</p>"));
+		jQuery(component).after(jQuery("<label id='emptyerror' class='errortext'>This field can't be empty</label>"));
 
 		return false;
 	} else{
