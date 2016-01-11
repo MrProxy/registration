@@ -37,6 +37,7 @@ tr:nth-child(2n) td{
 	color: #F44336;
 	font-size: 11px;
 	margin: 2px 0 2px 0;
+	text-align: justify;
 }
 /*%============================================GLOBAL========================================================================================%*/
 section.registration_content {
