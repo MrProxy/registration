@@ -1,13 +1,12 @@
 function validateEmail(sEmail) {
 
 	var email = jQuery(sEmail).val().trim();
-	var parent = jQuery(sEmail).parent(".field").get(0);
 
     var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
 
     if (!filter.test(email)) {
     	jQuery(sEmail).addClass("error");
-    	jQuery(parent).after(jQuery("<p id='emailerror' class='errortext'>This isn't a valid Email Address</p>"));
+    	jQuery(sEmail).after(jQuery("<label id='emailerror' class='errortext'>This isn't a valid Email Address</label>"));
 
     	return 1;
     } else{
@@ -18,13 +17,12 @@ function validateEmail(sEmail) {
 function validatePhone(sPhone){
 
 	var phone  = jQuery(sPhone).val().trim(); 
-	var parent = jQuery(sPhone).parent(".field").get(0);
 
 	var filter = /^\d{9}$/
 
 	if (!filter.test(phone)) {
 		jQuery(sPhone).addClass("error");
-		jQuery(parent).after(jQuery("<p id='contactphonerror' class='errortext'>The format of this number is not recognized. Check the number.</p>"));
+		jQuery(sPhone).after(jQuery("<label id='contactphonerror' class='errortext'>The format of this number is not recognized. Check the number.</label>"));
 
 		return 1;
 	} else{
@@ -37,12 +35,10 @@ function validatePin(sPin){
 	var pin = jQuery(sPin).val().trim();
 	var filter = /^\d{4}$/;
 
-	var parent = jQuery(sPin).parent(".field").get(0);
-
 	if (!filter.test(pin)) {
 
 		jQuery(sPin).addClass("error");
-		jQuery(parent).after(jQuery("<p id='pinerror' class='errortext'>The PIN must be numerical and has 4 digits.</p>"));
+		jQuery(sPin).after(jQuery("<label id='pinerror' class='errortext'>The PIN must be numerical and has 4 digits.</label>"));
 		return 1;
 	} else{
 		return 0;	
@@ -53,8 +49,6 @@ function validatePassword(sPass){
 
 	var pass = jQuery(sPass).val();
 
-	var parent = jQuery(sPass).parent(".field").get(0);
-
 	var filter0 = /[A-Z]/;
 	var filter1 = /[a-z]/;
 	var filter2 = /\d/;
@@ -64,7 +58,7 @@ function validatePassword(sPass){
 		return 0;
 	} else {
 		jQuery(sPass).addClass("error");
-		jQuery(parent).after(jQuery("<p id='passerror' class='errortext'>The password must has 5 characters or more, one uppercase letter, one lowercase letter and one number.</p>"));
+		jQuery(sPass).after(jQuery("<label id='passerror' class='errortext'>The password must has 5 characters or more, one uppercase letter, one lowercase letter and one number.</label>"));
 		return 1;
 	}
 }
@@ -74,12 +68,10 @@ function validateVPassword(sVPass){
 	var vpass = jQuery(sVPass).val().trim();
 	var pass = jQuery("#password").val().trim();
 
-	var parent = jQuery(sVPass).parent(".field").get(0);
-
 	if (vpass != pass) {
 
 		jQuery(sVPass).addClass("error");
-		jQuery(parent).after(jQuery("<p id='vpasserror' class='errortext'>The passwords do not match . Do you want to retry?</p>"));
+		jQuery(sVPass).after(jQuery("<label id='vpasserror' class='errortext'>The passwords do not match . Do you want to retry?</label>"));
 		return 1;
 
 	} else{
@@ -90,8 +82,6 @@ function validateVPassword(sVPass){
 function validateEmpty(component){
 
 	if(jQuery(component).val().trim().length == 0){
-
-		var parent = jQuery(component).parent(".field").get(0);
 
 		jQuery(component).addClass("error");
 	
@@ -119,9 +109,8 @@ function validateBirthDateDay(sDay , month, year){
 
 	if (dayint >= daysinmonth && dayint >= 1 && filter.test(day)){
 
-		var parent = jQuery(sDay).parent(".field").get(0);
 		jQuery(sDay).addClass("error");	
-		jQuery(parent).after(jQuery("<p id='dayerror' class='errortext'>It seems that the selected day is incorrect. Be sure to use a two-digit number that corresponds to one day of the month.</p>"));
+		jQuery(sDay).after(jQuery("<label id='dayerror' class='errortext'>It seems that the selected day is incorrect. Be sure to use a two-digit number that corresponds to one day of the month.</label>"));
 
 		return 1;
 	} else {
@@ -143,10 +132,8 @@ function validateBirthDateYear(sYear){
 	var filter = /^\d{4}$/;
 
 	if(yearint > minyear || yearint < maxyear && filter.test(year)){
-
-		var parent = jQuery(sYear).parent(".field").get(0);
 		jQuery(sYear).addClass("error");	
-		jQuery(parent).after(jQuery("<p id='yearerror' class='errortext'>It appears that the date is not correct. Be sure to enter your actual date of birth .</p>"));
+		jQuery(sYear).after(jQuery("<label id='yearerror' class='errortext'>It appears that the date is not correct. Be sure to enter your actual date of birth .</label>"));
 		return 1;
 	} else{
 		return 0;
