@@ -6,7 +6,7 @@ function validateEmail(sEmail) {
 
     if (!filter.test(email)) {
     	jQuery(sEmail).addClass("error");
-    	jQuery(sEmail).after(jQuery("<label id='emailerror' class='errortext'>This isn't a valid Email Address</label>"));
+    	jQuery(sEmail).after(jQuery("<label id='emailerror' class='errortext'>This isn't a valid Email Address. </label>"));
 
     	return 1;
     } else{
@@ -22,7 +22,7 @@ function validatePhone(sPhone){
 
 	if (!filter.test(phone)) {
 		jQuery(sPhone).addClass("error");
-		jQuery(sPhone).after(jQuery("<label id='contactphonerror' class='errortext'>The format of this number is not recognized. Check the number.</label>"));
+		jQuery(sPhone).after(jQuery("<label id='contactphonerror' class='errortext'>The format of this number is not recognized. Check the number. </label>"));
 
 		return 1;
 	} else{
@@ -38,7 +38,7 @@ function validatePin(sPin){
 	if (!filter.test(pin)) {
 
 		jQuery(sPin).addClass("error");
-		jQuery(sPin).after(jQuery("<label id='pinerror' class='errortext'>The PIN must be numerical and has 4 digits.</label>"));
+		jQuery(sPin).after(jQuery("<label id='pinerror' class='errortext'>The PIN must be numerical and has 4 digits. </label>"));
 		return 1;
 	} else{
 		return 0;	
@@ -58,7 +58,7 @@ function validatePassword(sPass){
 		return 0;
 	} else {
 		jQuery(sPass).addClass("error");
-		jQuery(sPass).after(jQuery("<label id='passerror' class='errortext'>The password must has 5 characters or more, one uppercase letter, one lowercase letter and one number.</label>"));
+		jQuery(sPass).after(jQuery("<label id='passerror' class='errortext'>The password must has 5 characters or more, one uppercase letter, one lowercase letter and one number. </label>"));
 		return 1;
 	}
 }
@@ -71,7 +71,7 @@ function validateVPassword(sVPass){
 	if (vpass != pass) {
 
 		jQuery(sVPass).addClass("error");
-		jQuery(sVPass).after(jQuery("<label id='vpasserror' class='errortext'>The passwords do not match . Do you want to retry?</label>"));
+		jQuery(sVPass).after(jQuery("<label id='vpasserror' class='errortext'>The passwords do not match. Do you want to retry? </label>"));
 		return 1;
 
 	} else{
@@ -85,7 +85,7 @@ function validateEmpty(component){
 
 		jQuery(component).addClass("error");
 	
-		jQuery(component).after(jQuery("<label id='emptyerror' class='errortext'>This field can't be empty</label>"));
+		jQuery(component).after(jQuery("<label id='emptyerror' class='errortext'>This field can't be empty. </label>"));
 
 		return false;
 	} else{
@@ -110,7 +110,7 @@ function validateBirthDateDay(sDay , month, year){
 	if (dayint >= daysinmonth && dayint >= 1 && filter.test(day)){
 
 		jQuery(sDay).addClass("error");	
-		jQuery(sDay).after(jQuery("<label id='dayerror' class='errortext'>It seems that the selected day is incorrect. Be sure to use a two-digit number that corresponds to one day of the month.</label>"));
+		jQuery(sDay).after(jQuery("<label id='dayerror' class='errortext'>It seems that the selected day is incorrect. Be sure to use a two-digit number that corresponds to one day of the month. </label>"));
 
 		return 1;
 	} else {
@@ -133,7 +133,7 @@ function validateBirthDateYear(sYear){
 
 	if(yearint > minyear || yearint < maxyear && filter.test(year)){
 		jQuery(sYear).addClass("error");	
-		jQuery(sYear).after(jQuery("<label id='yearerror' class='errortext'>It appears that the date is not correct. Be sure to enter your actual date of birth .</label>"));
+		jQuery(sYear).after(jQuery("<label id='yearerror' class='errortext'>It appears that the date is not correct. Be sure to enter your actual date of birth. </label>"));
 		return 1;
 	} else{
 		return 0;
