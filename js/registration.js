@@ -5,7 +5,7 @@ jQuery(document).ready(function(){
 	jQuery("#country").countrySelect();
 
 	jQuery(".userinfo").focusin(function(){
-		jQuery(next).nextAll("label").remove();
+		jQuery(this).nextAll("label").remove();
 		jQuery(this).removeClass("error");
 	});
 
